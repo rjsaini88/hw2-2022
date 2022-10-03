@@ -4,6 +4,7 @@
 }
 body{
     margin: 0px;
+    padding: 0px;
 }
 
  header{
@@ -14,6 +15,8 @@ body{
     align-items: center;
     background-color: darkgray;
     margin: 0px;
+    padding: 0px;
+
 
    
 }
@@ -39,6 +42,41 @@ nav ul li a{
     font-size: 20px;
     padding: 10px;
     border-bottom: 10px;
+}
 
+.chevron-background{
+    margin: 0px;
+    height: 200px;
+    background-image: url("/Assets/Chevron\ pattern.jpeg");
+    background-color: red;
+display: flex;
+justify-content: end;
+align-items: flex-end;
+padding: 20px;
+}
+.chevron-background h2{
+    background-color: aqua;
+    padding: 10px;
+}
+.main-page h2 {
+    margin: 50px;
+    display: inline;
+}
+.main-page{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: 20px;
+   list-style-type: none;
 
+}
+
+.main-page div {
+    border-left-style: solid;
+    margin: 10px;
+    text-align: center;
+    padding-left: 10px;
+    margin: 0px;
+    display: inline-block;
+   
 }
