@@ -1,9 +1,18 @@
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+  :root{
+    --main: #B22222;
+    --text:  black;
+  }
+
+
 body {
   font-size: 16px;
   margin: 0px;
@@ -16,75 +25,80 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  margin: 0px;
-  padding: 0px;
+  background-color: var(--text);
+  padding: 15px 50px 15px 0px
 }
 
 header h1 {
-  background-color: aqua;
+  background-color: var(--main);
   font-size: 48px;
-  padding-left: 60px;
+  font-weight: bold;
+  padding: 5px 5px 5px 100px;
+  margin-left: 0px;
+  
 }
 
-nav ul {
+nav {
   display: flex;
   flex-direction: row;
-  list-style-type: none;
   justify-content: space-between;
-  color: aqua;
   padding: 10px;
 }
-nav ul li a {
-  color: aqua;
+nav a {
+  color: #B22222		;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
   padding: 10px;
-  background-image: linear-gradient(90deg, purple, pink);
+  background-image: linear-gradient(90deg, purple, blue);
   background-size: 100% 3px;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
   background-position: bottom;
-  margin: 0 4px;
+  margin: 0 10px;
   transition: all 300ms ease-in-out;
-  /* transition: all 0.3s cubic-bezier(.37,1.61,.65,.85); */
 }
 
-nav ul li a:hover {
+nav a:hover {
   color: black;
   background-size: 100% 100%;
 }
 
 .chevron-background {
   margin: 0px;
-  height: 200px;
+  height: 250px;
   background-image: url("/Assets/Chevron\ pattern.jpeg");
   background-color: red;
   display: flex;
   justify-content: end;
   align-items: flex-end;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .chevron-background h2 {
-  background-color: aqua;
+  background-color: var(--text);
+  color: var(--main);
   padding: 10px;
   display: inline-block;
+  margin: 0px 70px 20px 0px;
+  font-size: 40px;
 }
 
 .main-page {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   padding: 1em;
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 20px;
+ 
 }
 
 .main-page h2 {
   width: 20%;
+/* border-right: solid; */
 }
 .main-page div {
   border-left-style: solid;
