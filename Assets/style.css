@@ -1,82 +1,113 @@
-*{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-body{
-    margin: 0px;
-    padding: 0px;
-}
-
- header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: darkgray;
-    margin: 0px;
-    padding: 0px;
-
-
-   
+body {
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
 }
 
-header h1{
-    background-color:aqua;
-    font-size: 48px;
-    padding-left: 60px;
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  margin: 0px;
+  padding: 0px;
+}
 
+header h1 {
+  background-color: aqua;
+  font-size: 48px;
+  padding-left: 60px;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: space-between;
-    color: aqua;
-    padding: 10px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  color: aqua;
+  padding: 10px;
 }
-nav ul li a{
-    color: aqua;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px;
-    border-bottom: 10px;
+nav ul li a {
+  color: aqua;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  background-image: linear-gradient(90deg, purple, pink);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  background-position: bottom;
+  margin: 0 4px;
+  transition: all 300ms ease-in-out;
+  /* transition: all 0.3s cubic-bezier(.37,1.61,.65,.85); */
 }
 
-.chevron-background{
-    margin: 0px;
-    height: 200px;
-    background-image: url("/Assets/Chevron\ pattern.jpeg");
-    background-color: red;
-display: flex;
-justify-content: end;
-align-items: flex-end;
-padding: 20px;
+nav ul li a:hover {
+  color: black;
+  background-size: 100% 100%;
 }
-.chevron-background h2{
-    background-color: aqua;
-    padding: 10px;
+
+.chevron-background {
+  margin: 0px;
+  height: 200px;
+  background-image: url("/Assets/Chevron\ pattern.jpeg");
+  background-color: red;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  padding: 20px;
 }
+
+.chevron-background h2 {
+  background-color: aqua;
+  padding: 10px;
+  display: inline-block;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  padding: 1em;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 .main-page h2 {
-    margin: 50px;
-    display: inline;
+  width: 20%;
 }
-.main-page{
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   margin: 20px;
-   list-style-type: none;
-
-}
-
 .main-page div {
-    border-left-style: solid;
-    margin: 10px;
-    text-align: center;
-    padding-left: 10px;
-    margin: 0px;
-    display: inline-block;
-   
+  border-left-style: solid;
+
+  text-align: center;
+  padding-left: 10px;
+
+  width: 75%;
+}
+
+@media screen and (max-width: 576px) {
+  .main-page {
+    flex-direction: column;
+  }
+
+  .main-page h2 {
+    width: 100%;
+    border-bottom: 3px black solid;
+    margin-bottom: 10px;
+  }
+
+  .main-page div {
+    width: 100%;
+    border: none;
+  }
 }
