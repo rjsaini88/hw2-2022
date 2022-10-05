@@ -1,20 +1,19 @@
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* margin: 0; */
+  font-size: 16px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
-  :root{
-    --main: #B22222;
-    --text:  black;
-  }
-
+:root {
+  --main: #b22222;
+  --text: black;
+}
 
 body {
-  font-size: 16px;
   margin: 0px;
   padding: 0px;
 }
@@ -26,16 +25,15 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--text);
-  padding: 15px 50px 15px 0px
+  padding: 15px 100px 15px 0px;
 }
 
 header h1 {
   background-color: var(--main);
-  font-size: 48px;
+  font-size: 4vw;
   font-weight: bold;
-  padding: 5px 5px 5px 100px;
+  padding: 5px 5px 5px 150px;
   margin-left: 0px;
-  
 }
 
 nav {
@@ -45,13 +43,13 @@ nav {
   padding: 10px;
 }
 nav a {
-  color: #B22222		;
+  color: #b22222;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 1.5vw;
   font-weight: bold;
   padding: 10px;
   background-image: linear-gradient(90deg, purple, blue);
-  background-size: 100% 3px;
+  background-size: 100% 4px;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
@@ -73,7 +71,6 @@ nav a:hover {
   display: flex;
   justify-content: end;
   align-items: flex-end;
-  /* padding: 20px; */
 }
 
 .chevron-background h2 {
@@ -81,8 +78,15 @@ nav a:hover {
   color: var(--main);
   padding: 10px;
   display: inline-block;
-  margin: 0px 70px 20px 0px;
+  margin: 0px 100px 20px 0px;
   font-size: 40px;
+}
+
+main {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .main-page {
@@ -93,21 +97,53 @@ nav a:hover {
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 20px;
- 
+  margin-top: 20px;
 }
 
 .main-page h2 {
   width: 20%;
-/* border-right: solid; */
+  text-align: right;
+  border-right: solid 4px;
+  padding-right: 15px;
+  color: red;
+  font-size: 4vw;
 }
 .main-page div {
-  border-left-style: solid;
-
-  text-align: center;
-  padding-left: 10px;
-
-  width: 75%;
+  text-align: left;
+  padding-left: 15px;
+  width: 80%;
 }
+
+address{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--text);
+  padding: 15px 100px 15px 0px;
+}
+address a {
+  color: #b22222;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 10px;
+  background-image: linear-gradient(90deg, purple, blue);
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-position: bottom;
+  margin: 0 10px;
+  transition: all 300ms ease-in-out;
+}
+
+address a:hover {
+  color: black;
+  background-size: 100% 100%;
+
 
 @media screen and (max-width: 576px) {
   .main-page {
@@ -118,10 +154,14 @@ nav a:hover {
     width: 100%;
     border-bottom: 3px black solid;
     margin-bottom: 10px;
+    border-right: none;
+    text-align: left;
+    padding-right: 25px;
   }
 
   .main-page div {
     width: 100%;
     border: none;
+    text-align: left;
   }
 }
