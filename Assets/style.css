@@ -46,7 +46,7 @@ nav {
   padding: 10px;
 }
 nav a {
-  color: #b22222;
+  color: var(--red);
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -63,7 +63,7 @@ nav a {
 }
 
 nav a:hover {
-  color: black;
+  color: var(--black);
   background-size: 100% 100%;
 }
 
@@ -109,7 +109,7 @@ section h2 {
   text-align: right;
   border-right: solid 4px;
   padding-right: 15px;
-  color: red;
+  color: var(--red);
   font-size: 4vw;
   line-height: 1.1;
 }
@@ -134,48 +134,47 @@ main section div {
 
 .background1-style {
   flex: 0 0 100%;
-  border: 4px solid red;
+  border: 4px solid var(--red);
   background-size: 100% 100%;
   min-height: 450px;
   display: flex;
   align-items: end;
   margin-bottom: 20px;
+  transition: all 300ms ease-in-out;
 }
-
+.background1-style:hover {
+  background-color: rgba(240, 248, 255, .5)
+}
 .second-work-div {
   display: flex;
-  flex: 0 0 49%;
-
   direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  border: 4px solid red;
+  border: 4px solid var(--red);
   flex-wrap: wrap;
 }
 
 .second-style {
   flex: 0 0 49%;
-  border: 4px solid red;
+  border: 4px solid var(--red);
   background-size: 100% 100%;
   min-height: 150px;
   display: flex;
   align-items: end;
   margin-bottom: 20px;
   justify-content: space-between;
+  transition: all 300ms ease-in-out;
+}
+.second-style:hover{
+  background-color: rgba(0, 0, 0, .05);
 }
 
 .my-work {
   display: inline-block;
   margin-bottom: 20px;
-
-  background-color: black;
-}
-
-.my-work {
+  background-color: var(--black);
   color: var(--red);
-
-  font-size: 2vw;
-
+  font-size: 1vw;
   line-height: 1.2;
   padding: 10px;
 }
@@ -184,7 +183,7 @@ main section div {
   background-image: url(/Assets/images.jpeg);
 }
 .background3 {
-  background-image: url(/Assets/Download-Forests-and-Saplings-Themes-for-Windows-7-2.jpeg);
+  background-image: url(/Assets/Feature-imagee.webp);
 }
 .background4 {
   background-image: url(/Assets/snow.jpeg);
