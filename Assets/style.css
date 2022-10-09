@@ -1,7 +1,7 @@
 * {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -48,7 +48,7 @@ nav {
 nav a {
   color: #b22222;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: bold;
   padding: 10px;
   background-image: linear-gradient(90deg, purple, blue);
@@ -59,6 +59,7 @@ nav a {
   background-position: bottom;
   margin: 0 7px;
   transition: all 300ms ease-in-out;
+  align-items: center;
 }
 
 nav a:hover {
@@ -82,7 +83,7 @@ nav a:hover {
   padding: 10px;
   display: inline-block;
   margin: 0px 100px 20px 0px;
-  font-size: 2vw;
+  font-size: 2rem;
   background: var(--black);
 }
 
@@ -94,18 +95,16 @@ main {
   margin-top: 20px;
 }
 
-main section {
+.main-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 1em;
   align-items: stretch;
   justify-content: space-between;
-  /* margin-bottom: 20px; */
-  /* margin-top: 20px; */
 }
 
-main section h2 {
+section h2 {
   flex: 0 0 18%;
   text-align: right;
   border-right: solid 4px;
@@ -115,89 +114,83 @@ main section h2 {
   line-height: 1.1;
 }
 main section div {
-  /* text-align: left; */
-  /* display: flex; */
-  /* padding-left: 15px; */
-  /* width: 78%; */
   flex: 0 0 80%;
 }
 
 .main-work-div {
   display: flex;
-  /* flex: 0 0 80%; */
-  direction: row;
-  justify-content: center;
-  border: 4px solid red;
+  flex: 0 0 80%;
 
-  
-  /* text-align: left; */
-  /* padding-left: 15px; */
-  /* width: 80%; */
-  /* min-height: 450px; */
-  /* background-image: url("/Assets/surf.jpeg"); */
-  /* display: flex; */
- 
-  /* flex: 0 0 80%; */
-  /* align-items: flex-start; */
-  /* background-size: 100% 100%; */
-  /* text-align: center; */
-  /* border: 4px solid red; */
+  direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  flex-wrap: wrap;
+}
+
+.background1 {
+  background-image: url(/Assets/surf.jpeg);
+}
+
+.background1-style {
+  flex: 0 0 100%;
+  border: 4px solid red;
+  background-size: 100% 100%;
+  min-height: 450px;
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
 }
 
 .second-work-div {
-  text-align: left;
-  /* min-height: 150px; */
-  /* min-width: 210px; */
-  /* width: 50%; */
-  /* background-image: url("/Assets/led.jpeg"); */
   display: flex;
-  /* flex: 0 0 50%; */
-  /* justify-content: flex-end; */
-  /* align-items: flex-end; */
-  background-size: 100% 100%;
-  border: 4px solid red;
-  text-align: end;
-  margin-bottom: 20px;
-  /* justify-content: space-between; */
+  flex: 0 0 49%;
 
-
-
-.my-work {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  direction: row;
   justify-content: space-between;
-  text-align: left;
-  width: 80%;
+  align-items: flex-end;
+  border: 4px solid red;
+  flex-wrap: wrap;
+}
+
+.second-style {
+  flex: 0 0 49%;
+  border: 4px solid red;
+  background-size: 100% 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
+  justify-content: space-between;
 }
 
 .my-work {
-  background-color: var(--black);
+  display: inline-block;
+  margin-bottom: 20px;
+
+  background-color: black;
+}
+
+.my-work {
   color: var(--red);
-  /* display: inline-block; */
-  /* margin: 0px 0px 20px 20px; */
+
   font-size: 2vw;
-  background: var(--black);
+
   line-height: 1.2;
   padding: 10px;
 }
 
-
+.background2 {
+  background-image: url(/Assets/images.jpeg);
 }
-.third-work-div {
-  /* text-align: left; */
-  min-height: 150px;
-  /* width: 50%; */
-  background-image: url("/Assets/calculator.jpeg");
-  display: flex;
-  flex: 0 0 50%;
-  justify-content: flex-end;
-  /* align-items: flex-end; */
-  background-size: 100% 100%;
-  border: 4px solid red;
-  text-align: center;
-  margin-bottom: 20px;
-  justify-content: space-between;
+.background3 {
+  background-image: url(/Assets/Download-Forests-and-Saplings-Themes-for-Windows-7-2.jpeg);
+}
+.background4 {
+  background-image: url(/Assets/snow.jpeg);
+}
+.background5 {
+  background-image: url(/Assets/dark-space-theme-jt2.jpeg);
 }
 
 address {
@@ -214,7 +207,7 @@ address {
 address a {
   color: #b22222;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   font-weight: bold;
   padding: 10px;
   background-image: linear-gradient(90deg, purple, blue);
@@ -233,12 +226,46 @@ address a:hover {
   background-size: 100% 100%;
 }
 
+@media screen and (max-width: 980px) {
+  header {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  header h1 {
+    width: 100%;
+    padding: 0;
+    font-size: 9vw;
+  }
+  nav {
+    justify-content: center;
+  }
+  .main-section {
+    flex-direction: column;
+  }
+  section h2 {
+    flex-direction: column;
+    border-right: none;
+    border-bottom: 3px solid red;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  address {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  address a {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 576px) {
-  .main-page {
+  .main-section {
     flex-direction: column;
   }
 
-  .main-page h2 {
+  main selection h2 {
     width: 100%;
     border-bottom: 3px black solid;
     margin-bottom: 10px;
@@ -247,9 +274,13 @@ address a:hover {
     padding-right: 25px;
   }
 
-  .main-page div {
+  main section div {
     width: 100%;
     border: none;
     text-align: left;
+  }
+  .sunset-background h2 {
+    text-align: center;
+    justify-content: center;
   }
 }
